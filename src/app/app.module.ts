@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from "@angular/material/card";
 import { NestedCardComponent } from './nested-card/nested-card.component';
+import { ProjectedNestedCardComponent } from './projected-nested-card/projected-nested-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NestedCardComponent } from './nested-card/nested-card.component';
     MultipleSectionCardComponent,
     CardTitleComponent,
     NestedCardComponent,
+    ProjectedNestedCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,19 +38,21 @@ import { NestedCardComponent } from './nested-card/nested-card.component';
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const htext = createCustomElement(HtextComponent, { injector });
-    const mbutton = createCustomElement(MbuttonComponent, { injector });
-    const materialButton = createCustomElement(MaterialButtonComponent, { injector });
-    const cardWithMultipleSections = createCustomElement(MultipleSectionCardComponent, { injector });
-    const nestedCard = createCustomElement(NestedCardComponent, { injector });
-    const cardTitle = createCustomElement(CardTitleComponent, { injector });
+    // const htext = createCustomElement(HtextComponent, { injector });
+    // const mbutton = createCustomElement(MbuttonComponent, { injector });
+    // const materialButton = createCustomElement(MaterialButtonComponent, { injector });
+    // const cardWithMultipleSections = createCustomElement(MultipleSectionCardComponent, { injector });
+    // const nestedCard = createCustomElement(NestedCardComponent, { injector });
+    // const cardTitle = createCustomElement(CardTitleComponent, { injector });
+    // const projectedNestedCard = createCustomElement(ProjectedNestedCardComponent, { injector })
 
-    customElements.define('app-htext', htext);
-    customElements.define('app-mbutton', mbutton);
-    customElements.define('app-material-button', materialButton);
-    customElements.define('app-multiple-section-card', cardWithMultipleSections);
-    customElements.define('app-nested-card', nestedCard);
-    customElements.define('app-card-title', cardTitle);
+    // customElements.define('app-htext', htext);
+    // customElements.define('app-mbutton', mbutton);
+    // customElements.define('app-material-button', materialButton);
+    // customElements.define('app-multiple-section-card', cardWithMultipleSections);
+    // customElements.define('app-nested-card', nestedCard);
+    // customElements.define('app-card-title', cardTitle);
+    // customElements.define('app-projected-nested-card', projectedNestedCard);
   }
   ngDoBootstrap() {}
 }
